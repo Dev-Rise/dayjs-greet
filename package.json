@@ -15,13 +15,21 @@
   "types": "src/index.d.ts",
   "jest": {
     "testMatch": [
-      "<rootDir>/src/**/(*.|)test.js"
-    ]
+      "<rootDir>/test/**/(*.|)test.js"
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   },
   "scripts": {
     "test": "jest",
-    "watch": "jest --watch",
-    "coverage": "jest --coverage",
     "lint": "eslint \"./src/**/*.js\"",
     "prettier": "prettier --check \"./src/**/*.js\""
   },
@@ -36,19 +44,42 @@
   "bugs": {
     "url": "https://github.com/Dev-Rise/dayjs-greet/issues"
   },
-  "homepage": "https://github.com/Dev-Rise/dayjs-greet#readme",
+  "homepage": "https://github.com/Dev-Rise/dayjs-greet#README",
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": ["CHANGELOG.md"]
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  },
   "peerDependencies": {
     "dayjs": "^1.11.5"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.5",
     "eslint": "^8.22.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.8.3",
     "jest": "^28.1.3",
-    "prettier": "^2.7.1"
-  },
-  "dependencies": {
-    "codecov": "^3.8.3"
+    "prettier": "^2.7.1",
+    "semantic-release": "^19.0.3"
   }
 }

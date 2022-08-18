@@ -1,12 +1,12 @@
 const dayjs = require('dayjs')
-require('dayjs/locale/de-at')
+require('dayjs/locale/de-ch')
 
-const greetPlugin = require('../index')
+const greetPlugin = require('../src')
 
 dayjs.extend(greetPlugin)
 
-it('Greet in DE-AT', () => {
-  dayjs.locale('de-at')
+it('Greet in DE-CH', () => {
+  dayjs.locale('de-ch')
   expect(dayjs('2022-07-07 04:00:00').greet()).toBe('Guten Morgen')
   expect(dayjs('2022-07-07 11:59:59').greet()).toBe('Guten Morgen')
   expect(dayjs('2022-07-07 11:59:59').greet(' custom suffix')).toBe(
