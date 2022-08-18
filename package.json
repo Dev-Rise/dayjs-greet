@@ -1,0 +1,54 @@
+{
+  "name": "dayjs-greet",
+  "version": "1.0.0",
+  "description": "Time-based greeting plugin for dayjs",
+  "keywords": [
+    "dayjs",
+    "date",
+    "datetime",
+    "greet",
+    "greeting",
+    "time-based",
+    "welcome"
+  ],
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "jest": {
+    "testMatch": [
+      "<rootDir>/src/**/(*.|)test.js"
+    ]
+  },
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "lint": "eslint \"./src/**/*.js\"",
+    "prettier": "prettier --check \"./src/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-Rise/dayjs-greet.git"
+  },
+  "author": {
+    "name": "Dev-Rise"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dev-Rise/dayjs-greet/issues"
+  },
+  "homepage": "https://github.com/Dev-Rise/dayjs-greet#readme",
+  "peerDependencies": {
+    "dayjs": "^1.11.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.8.3",
+    "jest": "^28.1.3",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "codecov": "^3.8.3"
+  }
+}
