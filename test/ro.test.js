@@ -1,7 +1,7 @@
 const dayjs = require('dayjs')
 require('dayjs/locale/ro')
 
-const greetPlugin = require('../index')
+const greetPlugin = require('../src')
 
 dayjs.extend(greetPlugin)
 

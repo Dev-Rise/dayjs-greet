@@ -1,6 +1,6 @@
 const dayjs = require('dayjs')
 
-const greetPlugin = require('../index')
+const greetPlugin = require('../src')
 
 dayjs.extend(greetPlugin)
 
