@@ -1,14 +1,10 @@
 name: Publish
 
 on:
-  push:
-    branches:
-      - main
   workflow_run:
-    workflows: [ "Lint & Unit Test" ]
-    types:
-      - completed
-  workflow_dispatch:
+    workflows: [Lint & Unit Test]
+    branches: [main]
+    types: [completed]
 
 jobs:
   release:
