@@ -1,7 +1,10 @@
 module.exports = (i) => {
   const hour = i.hour()
-  if (hour >= 4 && hour < 18) {
-    return 'Dobrý deň%s' // (4:00 - 17:59)
+  if (hour >= 4 && hour < 11) {
+    return 'God morgon%s' // (4:00 - 10:59)
   }
-  return 'Dobrý večer%s'
+  if (hour >= 11 && hour < 20) {
+    return 'Goddag%s' // (11:00 - 19:59)
+  }
+  return 'God kväll%s'
 }
