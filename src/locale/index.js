@@ -10,9 +10,11 @@ const it = require('./it')
 const nb = require('./nb')
 const nl = require('./nl')
 const pl = require('./pl')
+const pt = require('./pt')
 const ro = require('./ro')
 const ru = require('./ru')
 const sk = require('./sk')
+const sl = require('./sl')
 const sv = require('./sv')
 const tr = require('./tr')
 const uk = require('./uk')
@@ -39,9 +41,11 @@ module.exports = {
   nl,
   'nl-be': nl,
   pl,
+  pt,
   ro,
   ru,
   sk,
+  sl,
   sv,
   'sv-fi': sv,
   tr,
